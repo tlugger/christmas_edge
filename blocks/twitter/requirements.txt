@@ -1,0 +1,3 @@
+requests~=2.0
+requests_oauthlib~=1.0
+https://github.com/tseaver/python-oauth2/archive/py3.zip

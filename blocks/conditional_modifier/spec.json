@@ -1,0 +1,11 @@
+{
+  "nio/ConditionalModifier": {
+    "description": "Conditionally modify attributes of signals using expressions.",
+    "categories": [
+      "Signal Modifier"
+    ],
+    "tags": "if else condition custom expression rename datetime json math random regex",
+    "from_readme": "docs/conditional_modifier.md",
+    "from_python": "conditional_modifier_block.ConditionalModifier"
+  }
+}

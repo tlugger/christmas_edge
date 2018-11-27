@@ -1,0 +1,26 @@
+{
+  "nio/Replicator": {
+    "version": "1.1.0",
+    "description": "The Replicator block multiplies each incoming signal into a list of signals and emits that list. The length of the multiplied signals will be the same as the length of the list configured in the *list* property.  Each signal emitted will be the same as the original incoming signal, with an added attribute (Attribute Title) whose value corresponds to the *list* value at the same index.",
+    "categories": [
+      "Signal Modifier"
+    ],
+    "properties": {
+      "list": {
+        "title": "List",
+        "type": "Type",
+        "description": "An expression property that needs to evaluate to a list. A signal will be notified from the block for each item in the list.",
+        "default": ""
+      },
+      "title": {
+        "title": "Attribute Title",
+        "type": "StringType",
+        "description": "Name of attribute to be added with the corresponding list value.",
+        "default": ""
+      }
+    },
+    "inputs": {},
+    "outputs": {},
+    "commands": {}
+  }
+}

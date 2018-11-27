@@ -1,0 +1,7 @@
+{
+  "nio/Stagger": {
+    "language": "Python",
+    "url": "git://github.com/nio-blocks/stagger.git",
+    "version": "1.0.1"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "nio/MergeStreams": {
+    "version": "0.2.0",
+    "description": "The MergeStreams block takes signals from *input_1* and *input_2* and emits them as one signal.  If the signals have matching attributes (that aren't the group_by property) then the input_2 signal's attribute will take priority.",
+    "categories": [
+      "Signal Modifier"
+    ],
+    "properties": {
+      "backup_interval": {
+        "title": "Backup Interval",
+        "type": "TimeDeltaType",
+        "description": "An interval of time that specifies how often persisted data is saved.",
+        "default": {
+          "seconds": 3600
+        }
+      },
+      "expiration": {
+        "title": "Stream Expiration",
+        "type": "TimeDeltaType",
+        "description": "Length of time to store an incoming signal and wait for an incoming signal to the other input before dropping the signal.",
+        "default": {}
+      },
+      "group_by": {
+        "title": "Group By",
+        "type": "Type",
+        "description": "Signals from the two inputs are merged based on matching group attributes.",
+        "default": null
+      },
+      "load_from_persistence": {
+        "title": "Load from Persistence?",
+        "type": "BoolType",
+        "description": "If `True`, the block’s state will be saved when the block is stopped, and reloaded once the block is restarted.",
+        "default": true
+      },
+      "notify_once": {
+        "title": "Notify Once?",
+        "type": "BoolType",
+        "description": "If true (checked), remove a signal from block after it is merged and emitted.",
+        "default": true
+      }
+    },
+    "inputs": {
+      "input_1": {
+        "description": "Any list of signals."
+      },
+      "input_2": {
+        "description": "Any list of signals."
+      }
+    },
+    "outputs": {
+      "default": {
+        "description": "A new signal that is the merged version of one signal from input_1 and one signal from input_2."
+      }
+    },
+    "commands": {
+      "groups": {
+        "params": {},
+        "description": "Display all the current groupings of the signals."
+      }
+    }
+  }
+}
